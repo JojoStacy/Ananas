@@ -209,7 +209,7 @@ public class PaintFragment extends BaseEditFragment implements View.OnClickListe
 
 
         mPaintModeView.setPaintStrokeColor(Color.WHITE);
-        mPaintModeView.setPaintStrokeWidth(30);
+        mPaintModeView.setPaintStrokeWidth(20);
 
         updatePaintView();
     }
