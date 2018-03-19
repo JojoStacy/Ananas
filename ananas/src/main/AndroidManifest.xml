@@ -6,8 +6,6 @@
         <activity android:name="iamutkarshtiwari.github.io.ananas.editimage.EditImageActivity"
             android:label="@string/library_name"
             android:exported="true"/>
-
-        <activity android:name=".picchooser.SelectPictureActivity"/>
     </application>
 
 </manifest>
