@@ -30,7 +30,6 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:27.+'
     compile 'com.isseiaoki:simplecropview:1.1.7'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.30"
-    compile 'petrov.kristiyan:colorpicker-library:1.1.8'
 
 }
 repositories {

@@ -25,7 +25,7 @@ import iamutkarshtiwari.github.io.ananas.editimage.EditImageActivity;
 import iamutkarshtiwari.github.io.ananas.editimage.ModuleConfig;
 import iamutkarshtiwari.github.io.ananas.editimage.task.StickerTask;
 import iamutkarshtiwari.github.io.ananas.editimage.view.TextStickerView;
-import petrov.kristiyan.colorpicker.ColorPicker;
+//import petrov.kristiyan.colorpicker.ColorPicker;
 
 
 public class AddTextFragment extends BaseEditFragment implements TextWatcher {
@@ -43,7 +43,7 @@ public class AddTextFragment extends BaseEditFragment implements TextWatcher {
     private EditText mInputText;//输入框
     private ImageView mTextColorSelector;//颜色选择器
     private TextStickerView mTextStickerView;// 文字贴图显示控件
-    private ColorPicker mColorPicker;
+//    private ColorPicker mColorPicker;
 
     private int mTextColor = Color.WHITE;
     private InputMethodManager imm;
@@ -108,25 +108,25 @@ public class AddTextFragment extends BaseEditFragment implements TextWatcher {
         public void onClick(View v) {
 
             ArrayList<String> kellyColors = new ArrayList<String>(Arrays.asList(KELLY_COLORS));
-            mColorPicker = new ColorPicker(activity);
-            mColorPicker.setOnFastChooseColorListener(new ColorPicker.OnFastChooseColorListener() {
-
-                @Override
-                public void setOnFastChooseColorListener(int position, int color) {
-                    changeTextColor(color);
-                    mColorPicker.dismissDialog();
-                }
-
-                @Override
-                public void onCancel() {
-
-                }
-            }).disableDefaultButtons(true)
-                    .setColors(kellyColors)
-                    .setDefaultColorButton(Color.parseColor("#ffffff"))
-                    .setColumns(5).setRoundColorButton(true);
-
-            mColorPicker.show();
+//            mColorPicker = new ColorPicker(activity);
+//            mColorPicker.setOnFastChooseColorListener(new ColorPicker.OnFastChooseColorListener() {
+//
+//                @Override
+//                public void setOnFastChooseColorListener(int position, int color) {
+//                    changeTextColor(color);
+//                    mColorPicker.dismissDialog();
+//                }
+//
+//                @Override
+//                public void onCancel() {
+//
+//                }
+//            }).disableDefaultButtons(true)
+//                    .setColors(kellyColors)
+//                    .setDefaultColorButton(Color.parseColor("#ffffff"))
+//                    .setColumns(5).setRoundColorButton(true);
+//
+//            mColorPicker.show();
         }
     }
 
