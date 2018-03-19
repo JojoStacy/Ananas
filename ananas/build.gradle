@@ -29,7 +29,7 @@ dependencies {
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
     compile 'com.android.support:recyclerview-v7:26.+'
     compile 'com.isseiaoki:simplecropview:1.1.7'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     compile 'petrov.kristiyan:colorpicker-library:1.1.8'
 
 }

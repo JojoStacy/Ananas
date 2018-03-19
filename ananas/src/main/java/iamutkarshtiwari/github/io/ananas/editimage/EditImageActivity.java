@@ -143,6 +143,10 @@ public class EditImageActivity extends BaseActivity {
         context.startActivityForResult(it, requestCode);
     }
 
+    public static void start(Activity context, final String editImagePath, final String outputPath, final int requestCode) {
+        start(context, editImagePath, outputPath, requestCode, false);
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
