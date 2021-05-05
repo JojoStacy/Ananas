@@ -1,7 +1,6 @@
 package iamutkarshtiwari.github.io.ananas.editimage.adapter;
 
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.ViewHolder;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -9,11 +8,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import iamutkarshtiwari.github.io.ananas.R;
 import iamutkarshtiwari.github.io.ananas.editimage.fragment.StickerFragment;
 
 
-public class StickerTypeAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class StickerTypeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public static final int[] typeIcon = {R.drawable.stickers_type_animal,
             R.drawable.stickers_type_motion, R.drawable.stickers_type_cos,
             R.drawable.stickers_type_mark, R.drawable.stickers_type_decoration};
@@ -31,7 +32,7 @@ public class StickerTypeAdapter extends RecyclerView.Adapter<ViewHolder> {
         stickerCount = mStickerFragment.getResources().getIntArray(R.array.type_count);
     }
 
-    public class ImageHolder extends ViewHolder {
+    public class ImageHolder extends RecyclerView.ViewHolder {
         public ImageView icon;
         public TextView text;
 
@@ -53,7 +54,7 @@ public class StickerTypeAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewtype) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewtype) {
         View v = null;
         v = LayoutInflater.from(parent.getContext()).inflate(
                 R.layout.view_sticker_type_item, parent, false);
@@ -63,7 +64,7 @@ public class StickerTypeAdapter extends RecyclerView.Adapter<ViewHolder> {
 
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ImageHolder imageHoler = (ImageHolder) holder;
         String name = stickerPathName[position];
         imageHoler.text.setText(name);

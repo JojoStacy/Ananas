@@ -1,12 +1,13 @@
 package iamutkarshtiwari.github.io.ananas.editimage.adapter;
 
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.ViewHolder;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class StickerAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class StickerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public DisplayImageOptions imageOption = new DisplayImageOptions.Builder()
             .cacheInMemory(true).showImageOnLoading(R.drawable.yd_image_tx)
             .build();
@@ -33,7 +34,7 @@ public class StickerAdapter extends RecyclerView.Adapter<ViewHolder> {
         this.mStickerFragment = fragment;
     }
 
-    public class ImageHolder extends ViewHolder {
+    public class ImageHolder extends RecyclerView.ViewHolder {
         public ImageView image;
 
         public ImageHolder(View itemView) {
@@ -53,7 +54,7 @@ public class StickerAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewtype) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewtype) {
         View v = null;
         v = LayoutInflater.from(parent.getContext()).inflate(
                 R.layout.view_sticker_item, parent, false);
@@ -62,7 +63,7 @@ public class StickerAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ImageHolder imageHolder = (ImageHolder) holder;
         String path = pathList.get(position);
 

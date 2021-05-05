@@ -1,15 +1,16 @@
 package iamutkarshtiwari.github.io.ananas.editimage.adapter;
 
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.ViewHolder;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import iamutkarshtiwari.github.io.ananas.R;
 import iamutkarshtiwari.github.io.ananas.editimage.fragment.PaintFragment;
 
-public class ColorListAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class ColorListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int TYPE_COLOR = 1;
     private static final int TYPE_MORE = 2;
 
@@ -32,7 +33,7 @@ public class ColorListAdapter extends RecyclerView.Adapter<ViewHolder> {
         this.mCallback = action;
     }
 
-    public class ColorViewHolder extends ViewHolder {
+    public class ColorViewHolder extends RecyclerView.ViewHolder {
         View colorPanelView;
 
         public ColorViewHolder(View itemView) {
@@ -41,7 +42,7 @@ public class ColorListAdapter extends RecyclerView.Adapter<ViewHolder> {
         }
     }
 
-    public class MoreViewHolder extends ViewHolder {
+    public class MoreViewHolder extends RecyclerView.ViewHolder {
         View moreBtn;
 
         public MoreViewHolder(View itemView) {
@@ -62,9 +63,9 @@ public class ColorListAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = null;
-        ViewHolder viewHolder = null;
+        RecyclerView.ViewHolder viewHolder = null;
         if (viewType == TYPE_COLOR) {
             v = LayoutInflater.from(parent.getContext()).inflate(
                     R.layout.view_color_panel, parent, false);
@@ -79,7 +80,7 @@ public class ColorListAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         int type = getItemViewType(position);
         if (type == TYPE_COLOR) {
             onBindColorViewHolder((ColorViewHolder) holder, position);
